@@ -1,13 +1,13 @@
 import { letters } from '../../data/Letters';
 
-const Board = () => {
+import Letter from './Letter';
+
+const Board = ({handleLetterClick}) => {
     return (
         <div className="board">
             {
                 letters.map((letter,i) => {
-                    return  <div className="board_letter" key={i}>
-                                <span>{letter.letter} <span>{letter.points}</span></span>
-                            </div>
+                    return <Letter key={i} letter={letter} handleLetterClick={handleLetterClick} />
                 })
             }
         </div>
