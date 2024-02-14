@@ -1,0 +1,38 @@
+@use '../../Variables.scss' as v;
+
+.board {
+    border: 1px solid v.$border;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 4px v.$shadow;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 20px;
+
+    &_letter {
+        border: 1px solid v.$border;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > span {
+            font-weight: 700;
+            font-size: 2.5rem;
+            position: relative;
+
+            & > span {
+                position: absolute;
+                font-weight: 200;
+                font-size: 1.5rem;
+                bottom: -10px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+    }
+}
