@@ -19,3 +19,18 @@ body {
     background-color: v.$background;
     color: v.$text;
 }
+
+.button {
+    border: 1px solid v.$border;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 20px;
+    justify-content: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: lightgrey;
+    }
+}
